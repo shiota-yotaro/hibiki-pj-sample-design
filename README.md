@@ -22,13 +22,13 @@ hibikiプロジェクトのシステム開発において、**GitHub Copilot等�
 
 ```
 📁 sample-design/
-├── 📄 README.md                                    # このファイル
-├── 📄 アプローチ概要.md                              # 全体戦略・ROI分析
-├── 📄 A01_データベース設計書サンプル.md               # 基本テンプレート
-├── 📄 A03_PL/SQLバッチ処理設計書サンプル.md          # バッチ処理テンプレート
-└── 📄 template/                        　　　　　　　# 生成AIの活用例
-    ├── DDL生成用プロンプトテンプレート集.md            # AI活用プロンプト
-    ├── レビューチェックリストテンプレート.md          # 品質保証
+├── 📄 README.md                                  # このファイル
+├── 📄 database-design-approach.md                # アプローチ概要・全体戦略・ROI分析
+├── 📄 A01_database_design_Sample.md              # データベース設計書サンプル
+├── 📄 A03_plsql_batch_design_sample.md           # PL/SQL設計書サンプル
+└── 📄 template/                        　　　　　 # 生成AIの活用例
+    ├── ddl_generation_prompts.md                 # DDL生成用プロンプトテンプレート集
+    ├── review_checklist_template.md              # レビューチェックリストテンプレート
     └── ... (他にも色々準備したい)
 ```
 
