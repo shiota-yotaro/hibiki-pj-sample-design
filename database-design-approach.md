@@ -1,4 +1,4 @@
-# 生成AI最大限活用を踏まえたデータベース設計書・PL/SQL設計書作成アプローチ
+# 生成AI最大限活用を踏まえたデータベース設計書作成アプローチ（アップデート版）
 
 ## エグゼクティブサマリー
 
@@ -11,7 +11,7 @@ hibikiプロジェクトでは、**生成AI活用による開発革命**を実�
 ### 1.1 プロジェクト成功への必然性
 
 hibikiプロジェクトが直面する課題：
-- **大規模システム**: 100を超えるテーブル、複雑な業務ロジック
+- **大規模システム**: 100近いテーブル、複雑な業務ロジック
 - **短期間納期**: 限られた期間での高品質システム構築
 - **技術者不足**: 経験豊富な開発者の確保困難
 - **品質要求**: 商社基幹システムとしての高い信頼性要求
@@ -70,19 +70,19 @@ flowchart TD
 
 ## 3. 新アプローチの技術的優位性
 
-### 3.1 生成AI活用エコシステム
+### 3.1 GitHub Copilot活用エコシステム
 
 ```mermaid
 graph TB
     subgraph "Input Layer"
         MD[Markdown設計書<br/>構造化テキスト]
         MT[mermaid図<br/>コードベース図表]
+        PT[プロンプト<br/>テンプレート]
     end
     
-    subgraph "AI Processing Layer"
-        GC[GitHub Copilot]
-        PT[プロンプト<br/>テンプレート]
-        AI[生成AI<br/>エンジン]
+    subgraph "GitHub Copilot Processing"
+        GC[GitHub Copilot<br/>コード生成エンジン]
+        CC[Copilot Chat<br/>対話型支援]
     end
     
     subgraph "Output Layer"
@@ -94,15 +94,15 @@ graph TB
     
     MD --> GC
     MT --> GC
-    PT --> AI
+    PT --> CC
     GC --> DDL
     GC --> PL
-    AI --> TD
-    AI --> DOC
+    CC --> TD
+    CC --> DOC
     
     style MD fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
     style GC fill:#e8f5e8,stroke:#4caf50,stroke-width:2px
-    style AI fill:#e8f5e8,stroke:#4caf50,stroke-width:2px
+    style CC fill:#e8f5e8,stroke:#4caf50,stroke-width:2px
 ```
 
 ### 3.2 技術スタック選択の戦略的意図
